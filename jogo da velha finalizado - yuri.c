@@ -19,8 +19,8 @@ scanf("%s",nome1);
 printf("\n\n DIGITE O NOME DO JOGADOR 2(SEM ACENTOS) :");
 scanf("%s",nome2);
 system("cls");
-printf("%s, VOC  IRA JOGAR UTILIZANDO A SIMBOLOGIA O \n\n",strupr(nome1));
-printf("%s, VOC  IRA JOGAR UTILIZANDO A SIMBOLOGIA X \n\n\n\nPRESSIONE UMA TECLA PARA CONTINUAR...",strupr(nome2));
+printf("%s, VOC√ä IRA JOGAR UTILIZANDO A SIMBOLOGIA O \n\n",strupr(nome1));
+printf("%s, VOC√ä IRA JOGAR UTILIZANDO A SIMBOLOGIA X \n\n\n\nPRESSIONE UMA TECLA PARA CONTINUAR...",strupr(nome2));
 getch();
 system("cls");
     do
@@ -35,7 +35,7 @@ system("cls");
         printf("\n###############################################################################\n################################ JOGO DA VELHA ################################\n###############################################################################\n\n");
         system("color 0E");
         printf("\n\t\t \t 1   2   3 \n\n");
-        printf("\n\n\t\t1\t %c | %c | %c                    MOVIMENTOS: %d\n\t\t \t___ ___ ___\n\n\t\t2\t %c | %c | %c                    VIT”RIAS DE %s: %d\n\t\t \t___ ___ ___\n\n\t\t3\t %c | %c | %c                    VIT”RIAS DE %s: %d\n",posicao[0][0],posicao[0][1],posicao[0][2],movimentos,posicao[1][0],posicao[1][1],posicao[1][2],strupr(nome1),jogador1,posicao[2][0],posicao[2][1],posicao[2][2],strupr(nome2),jogador2);
+        printf("\n\n\t\t1\t %c | %c | %c                    MOVIMENTOS: %d\n\t\t \t___ ___ ___\n\n\t\t2\t %c | %c | %c                    VIT√ìRIAS DE %s: %d\n\t\t \t___ ___ ___\n\n\t\t3\t %c | %c | %c                    VIT√ìRIAS DE %s: %d\n",posicao[0][0],posicao[0][1],posicao[0][2],movimentos,posicao[1][0],posicao[1][1],posicao[1][2],strupr(nome1),jogador1,posicao[2][0],posicao[2][1],posicao[2][2],strupr(nome2),jogador2);
         printf("\n\n\n\n\n");
         if(movimentos%2)printf("VEZ DE %s < X >\nINSIRA A LINHA: ",strupr(nome2));
         else printf("VEZ DE %s < O >\nINSIRA A LINHA: ",strupr(nome1));
@@ -58,7 +58,7 @@ system("cls");
             (posicao[0][0]==O && posicao[1][1]==O && posicao[2][2]==O)||
             (posicao[0][2]==O && posicao[1][1]==O && posicao[2][0]==O))
             {
-            printf("\n\n\t\tVIT”RIA DE %s COM %d JOGADAS!!!\n\n",strupr(nome1),movimentos);
+            printf("\n\n\t\tVIT√ìRIA DE %s COM %d JOGADAS!!!\n\n",strupr(nome1),movimentos);
             jogador1++;
             getch();
             system("cls");
@@ -73,7 +73,7 @@ system("cls");
             (posicao[0][0]==X && posicao[1][1]==X && posicao[2][2]==X)||
             (posicao[0][2]==X && posicao[1][1]==X && posicao[2][0]==X))
             {
-            printf("\n\n\t\tVIT”RIA DE %s COM %d JOGADAS!!!\n\n",strupr(nome2),movimentos);
+            printf("\n\n\t\tVIT√ìRIA DE %s COM %d JOGADAS!!!\n\n",strupr(nome2),movimentos);
             jogador2++;
             getch();
             system("cls");
@@ -81,7 +81,7 @@ system("cls");
             }
             if(movimentos==9)
             {
-            printf("PARTIDA EMPATADA!!!\n\n");
+            printf("PARTIDA EMPATADA, A PARTIDA ATINGIU 9 JOGADAS!!!\n\n");
             empate++;
             getch();
             system("cls");
@@ -90,15 +90,15 @@ system("cls");
 
         }
     movimentos=0;
-    printf("DESEJA CONTINUAR?? < 0 > SIM  |  < 1 OU DEMAIS NUMEROS > N√O\n");
+    printf("DESEJA CONTINUAR?? < 0 > SIM  |  < 1 OU DEMAIS NUMEROS > N√ÉO\n");
     scanf("%d",&resposta);
     system("cls");
         if(resposta!=0)
         {
-        printf("\n\nVIT”RIAS DE %s: %d\n\nVIT”RIAS DE %s: %d\n\n",strupr(nome1),jogador1,strupr(nome2),jogador2);
+        printf("\n\nVIT√ìRIAS DE %s: %d\n\nVIT√ìRIAS DE %s: %d\n\n",strupr(nome1),jogador1,strupr(nome2),jogador2);
         getch();
         system("cls");
-        printf("\n\nJOGO CRIADO POR YURI FUKUOKA DE OLIVEIRA\nUFCSPA(UNIVERSIDADE FEDERAL DE CIENCIAS DA SA⁄DE DE PORTO ALEGRE)\nINFORM¡TICA BIOM…DICA AD2019\n2016\n\n");
+        printf("\n\nJOGO CRIADO POR YURI FUKUOKA DE OLIVEIRA\nUFCSPA(UNIVERSIDADE FEDERAL DE CIENCIAS DA SA√öDE DE PORTO ALEGRE)\nINFORM√ÅTICA BIOM√âDICA AD2019\n2016\n\n");
         system("pause");
         system("cls");
         }
